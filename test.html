@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>测试页面</title>
+    <style>
+      body {
+        margin: 0;
+        height: 100vh;
+        background-color: rgb(172, 169, 169);
+      }
+      /* * {
+        border: 1px solid black;
+      } */
+      .flex {
+        display: flex;
+      }
+      .baise {
+        background-color: white;
+      }
+      .flex1 {
+        flex: 1;
+      }
+      .column {
+        flex-direction: column;
+      }
+      .mg8 {
+        margin: 8px;
+      }
+      .mgr8 {
+        margin-right: 8px;
+      }
+      .mgt8 {
+        margin-top: 8px;
+      }
+      .yinying {
+        box-shadow: black;
+      }
+      .center {
+        justify-content: center;
+      }
+      .bgblue {
+        background-color: rgb(0, 78, 162);
+      }
+      .daohang {
+        padding: 10px 20px;
+        border-bottom: 2px solid gray;
+        font-size: 18px;
+        color: #666;
+      }
+      @media (max-width: 600px) {
+        .cebian {
+          display: none;
+        }
+        .neirong {
+          flex-direction: column;
+        }
+        .shuju {
+          flex-direction: column;
+        }
+        .youqu {
+          margin-left: 8px;
+        }
+      }
+    </style>
+  </head>
+  <body class="flex">
+    <!-- 侧边栏 -->
+    <div style="width: 160px; z-index: 1" class="cebian baise yinying">
+      <!-- 头像栏 -->
+      <div class="flex center bgblue" style="border-bottom: 1px solid">
+        <img src="/logo.png" alt="冲鸭" height="60px" width="60px" />
+      </div>
+      <!-- 导航栏 -->
+      <div class="flex1">
+        <div class="daohang">导航</div>
+        <div class="daohang">导航</div>
+        <div class="daohang">导航</div>
+        <div class="daohang">导航</div>
+        <div class="daohang">导航</div>
+        <div class="daohang"><a href="/index.html">返回主页</a></div>
+      </div>
+    </div>
+    <!-- 主区域-->
+    <div class="flex1 flex column">
+      <!-- 头部栏 -->
+      <div style="height: 60px; z-index: 1" class="baise yinying"></div>
+      <!-- 内容区 -->
+      <div style="overflow: auto" class="neirong flex1 flex">
+        <!-- 左区 -->
+        <div style="flex: 3" class="flex column mg8">
+          <!-- 数据区 -->
+          <div class="flex shuju">
+            <!-- 数据块 -->
+            <div style="height: 100px" class="flex1 baise yinying mgr8"></div>
+            <div style="height: 100px" class="flex1 baise yinying mgr8"></div>
+            <div style="height: 100px" class="flex1 baise yinying mgr8"></div>
+            <div style="height: 100px" class="flex1 baise yinying"></div>
+          </div>
+          <!-- 列表区 -->
+          <div class="flex column">
+            <!-- 列表项 -->
+            <div style="height: 160px" class="baise yinying mgt8"></div>
+            <div style="height: 160px" class="baise yinying mgt8"></div>
+            <div style="height: 160px" class="baise yinying mgt8"></div>
+            <div style="height: 160px" class="baise yinying mgt8"></div>
+            <div style="height: 160px" class="baise yinying mgt8"></div>
+          </div>
+        </div>
+        <!-- 右区 -->
+        <div style="flex: 1" class="flex column mg8">
+          <!-- 提示区 -->
+          <div style="height: 150px" class="baise yinying"></div>
+          <!-- 消息区 -->
+          <div style="height: 300px" class="baise yinying mgt8"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
